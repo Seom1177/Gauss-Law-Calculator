@@ -1,0 +1,29 @@
+
+<p-image src="https://sites.google.com/site/fisicaiiuni/_/rsrc/1380439088554/clases/cap-2-campo-electrico-y-ley-de-gauss/24_sp_gaussLaw1.jpg?height=300&width=400" 
+class="center" alt="Image" width="150">
+</p-image>
+
+<div class="card flex flex-wrap gap-3 p-fluid">
+    <p>Introducir los datos para un conductor electrico aislado, con una distribucion de carga uniforme.</p>
+    
+    <div class="row">
+        <div class="column">
+            <label for="integeronly">Carga del conductor (C)</label>
+            <p-inputNumber inputId="integeronly" mode="decimal" [minFractionDigits]="0" [maxFractionDigits]="5" [(ngModel)]="cargaNeta"> </p-inputNumber>
+        </div>
+        <div class="column">
+            <label for="integeronly">Potencia de la carga (10^n)</label>
+            <p-inputNumber [(ngModel)]="potenciaCampoElectrico" [showButtons]="true" inputId="pow"> </p-inputNumber>
+        </div>
+    </div>
+    <div class="flex-auto">  
+        <label for="integeronly">Radio desde el centro (m^2)</label>
+        <p-inputNumber inputId="integeronly" mode="decimal" [minFractionDigits]="0" [maxFractionDigits]="5" [(ngModel)]="radio"> </p-inputNumber>
+    </div>
+    <div class="flex-auto">
+        <p-button label="Calcular" icon="pi pi-check" iconPos="right" (click)="calcularCampoElectrico()"></p-button>
+    </div>
+    <div class="flex-auto">
+        <p class="result">Campo electrico: {{campoElectrico}} C</p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<p-image src="https://enciclopedia.net/wp-content/uploads/ciencia/ley-gauss-2.png"
+class="center" alt="Image" width="150"></p-image>
+
+<div class="card flex flex-wrap gap-3 p-fluid">
+    <p>Introducir los datos para un conductor electrico aislado, con una distribucion de carga uniforme.</p>
+    <div class="flex-auto">
+        <label for="integeronly">Campo electrico (N/C)</label>
+        <p-inputNumber inputId="integeronly" mode="decimal" [minFractionDigits]="0" [maxFractionDigits]="5" [(ngModel)]="campoElectrico"> </p-inputNumber>
+    </div>
+    <div >  
+        <label for="integeronly">Radio desde el centro (m^2)</label>
+        <p-inputNumber inputId="integeronly" mode="decimal" [minFractionDigits]="0" [maxFractionDigits]="5" [(ngModel)]="radio"> </p-inputNumber>
+    </div>
+    <div class="flex-auto">
+        <p-button label="Calcular" icon="pi pi-check" iconPos="right" (click)="calcularCargaNeta()"></p-button>
+    </div>
+    <div class="flex-auto">
+        <p class="result">Carga neta: {{cargaNeta}} C</p>
+    </div>
+</div>
